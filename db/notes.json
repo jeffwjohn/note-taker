@@ -19,6 +19,16 @@
       "title": "Call BugMaster",
       "text": "Wasps are taking over the backyard!! Call for help!",
       "id": "3"
+    },
+    {
+      "title": "Save this.",
+      "text": "I want to save this new note. ",
+      "id": "4"
+    },
+    {
+      "title": "It works!",
+      "text": "I can now save and write new notes... Awesome!",
+      "id": "5"
     }
   ]
 }
