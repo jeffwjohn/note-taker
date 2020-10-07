@@ -2,17 +2,17 @@
 
     "notes": [{
         "title": "Test Title",
-        "text": "Test text",
+        "text": "Test text for the first note.",
         "id": "test_id"
     },
     {
         "title": "Test-Title2",
-        "text": "Test text",
+        "text": "Test text for the second note!!",
         "id": "test_id"
     },
     {
         "title": "Test-Title3",
-        "text": "Test text",
+        "text": "Third times the charm!",
         "id": "test_id"
     }]
 
