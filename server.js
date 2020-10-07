@@ -5,6 +5,13 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const PORT = 3001;
+const { notes } = require('./db/notes');
+
+//=======================================================
+// Parse incoming JSON data
+//=======================================================
+app.use(express.json());
+app.use(express.static('public'));
 
 //=======================================================
 // Routes
@@ -14,19 +21,33 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, './public/index.html'));
+// });
+
+function filterByQuery(query, notesArray) {
+    let filteredResults = notesArray;
+    if (query.title) {
+      filteredResults = filteredResults.filter(note => note.title === query.title);
+    }
+    if (query.id) {
+      filteredResults = filteredResults.filter(note => note.id === query.id);
+    }
+
+    return filteredResults;
+  }
 
 app.get('/api/notes', (req, res) => {
+
     let results = notes;
     if (req.query) {
         results = filterByQuery(req.query, results);
-    }
+      }
+    console.log(req.query)
     res.json(results);
 });
 
-router.post("/notes", (req, res) => {
+app.post("/notes", (req, res) => {
     // set id based on what the next index of the array will be
     req.body.id = notes.length.toString();
   
@@ -38,3 +59,7 @@ router.post("/notes", (req, res) => {
       res.json(note);
     }
   });
+
+  app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+});
