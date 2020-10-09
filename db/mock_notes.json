@@ -1,19 +1,34 @@
 {
-    "notes": [
-      {
-        "title": "Call BugMaster",
-        "text": "Wasps are taking over the backyard!! Call for help!",
-        "id": "0"
-      },
-      {
-        "title": "Change oil",
-        "text": "My car is way overdue..\n",
-        "id": "1"
-      },
-      {
-        "title": "Practice guitar",
-        "text": "Play for at least an hour.",
-        "id": "2"
-      }
-    ]
+  "notes": [
+    {
+      "title": "Call BugMaster",
+      "text": "Wasps are taking over the backyard!! Call for help!",
+      "id": "0"
+    },
+    {
+      "title": "Change oil",
+      "text": "My car is way overdue..\n",
+      "id": "1"
+    },
+    {
+      "title": "Practice guitar",
+      "text": "Play for at least an hour.",
+      "id": "2"
+    },
+    {
+      "title": "Make coffee",
+      "text": "I'm sleepy!! Call for help!",
+      "id": "3"
+    },
+    {
+      "title": "Mow the yard ",
+      "text": "The grass is too tall!",
+      "id": "1"
+    },
+    {
+      "title": "Pay mortgage",
+      "text": "It's that time again.",
+      "id": "2"
+    }
+  ]
   }
